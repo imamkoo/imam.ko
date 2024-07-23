@@ -8,15 +8,10 @@ const Home = () => {
 
   const submitPortfolio = async (e) => {
     e.preventDefault();
-    console.log("Form submitted"); // Tambahkan log ini untuk memastikan fungsi dipanggil
-    console.log(form.current); // Log untuk melihat referensi form
-
     const name = form.current[0]?.value;
     const description = form.current[1]?.value;
     const url = form.current[2]?.value;
     const image = form.current[3]?.files[0];
-
-    console.log({ name, description, url, image }); // Log untuk melihat nilai form
 
     if (!name || !description || !url || !image) {
       alert("Please fill in all fields");
